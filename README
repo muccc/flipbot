@@ -1,0 +1,4 @@
+Ich hab mal eben versucht den Code von Gigo zusammen zu kopieren und mal auf
+github zu bringen.  "willie" ist wohl ein python ircbot-fnord der in ~/.willie
+seine config/files findet. Also zum deployen/entwickeln vermutlich "willie"
+installieren und _willie aus dem Repository nach ~/.willie linken.
