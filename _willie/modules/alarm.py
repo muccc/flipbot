@@ -669,7 +669,7 @@ class FlipdotMatrix():
     def __list2byte(ArrayOfBinaryInts):
         byte  = 0
         for i in range(8):
-            byte += 2**(7-i) if ArrayOfBinaryInts[i] else 0
+            byte += 2**(7-i) if not ArrayOfBinaryInts[i] else 0
         return byte
 
     def __sendUdpPackage(self, udpPacket, udpHostAndPort):
