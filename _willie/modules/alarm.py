@@ -214,7 +214,7 @@ font7px={
     [0,1,0,0,0],
     [1,1,1,1,0],
     ],
-    "Ä": [
+    u"Ä": [
     [1,0,0,1,0],
     [0,0,0,0,0],
     [0,1,1,0,0],
@@ -222,7 +222,7 @@ font7px={
     [1,1,1,1,0],
     [1,0,0,1,0],
     ],
-    "Ö": [
+    u"Ö": [
     [1,0,0,1,0],
     [0,0,0,0,0],
     [0,1,1,0,0],
@@ -230,7 +230,7 @@ font7px={
     [1,0,0,1,0],
     [0,1,1,0,0],
     ],
-    "Ü": [
+    u"Ü": [
     [1,0,0,1,0],
     [0,0,0,0,0],
     [1,0,0,1,0],
@@ -646,10 +646,11 @@ class FlipdotMatrix():
         self.flipdotImage = FlipdotImage.newBlackFlipdotImage(width, height)
 
     def showText(self, text, linebreak = False, xPos=0, yPos = 0):
-
         """
         print text to display
         """
+        text = text.replace(u'ß', 'SS')
+
         self.__clearFlipdotImageWithoutUpdate()
         self.flipdotImage.blitTextAtPosition(text, linebreak, xPos, yPos)
         self.__updateFlipdotMatrixes()
